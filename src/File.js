@@ -100,7 +100,7 @@ class File extends React.Component {
     <br/>
          <input type="text" placeholder="Price" value={this.state.value2} onChange={this.handleChange2} />
     <br/>
-         <input id="myfile" type="file" onChange={(e)=>this._handleImageChange(e)}/>
+         <input className="inputfile" type="file" onChange={(e)=>this._handleImageChange(e)}/>
     <br/>
          <button className="button" onClick={this.functionToAddThings}>Add Item</button> 
     </div>
@@ -112,15 +112,28 @@ class File extends React.Component {
           <h1>Current price is: ${this.state.Total}.00</h1>
     </footer>
 
-    <footer className="More" sTyle="display:none;">
-          <h1 onClick={this.Charge}>More Info</h1>
-    </footer>
+    <div id="content">
+
+  <div className="box" sTyle="background-color:red;"> 
+      <img src="https://www.freeiconspng.com/uploads/cash-machine-icon-17.png" alt="logo" width="80" height="80"/>
+   </div>
+
+  <div className="box" sTyle="background-color:lightblue;">
+     <img src="http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/money-icon.png" alt="logo" width="80" height="80"/>
+  </div>
+
+  <div className="box" sTyle="background-color:yellow;">
+      <img src="https://www.freeiconspng.com/uploads/cash-machine-icon-17.png" alt="logo" width="80" height="80"/>
+  </div>
+  
+</div>
+
             
-    <footer className="App-footer" sTyle="display:none;">
+    <footer className="App-footer" >
           <h1>{this.state.Purchases}</h1>
     </footer>
 
-    <footer className="App-header" sTyle="display: none;">
+    <footer className="App-header" >
           <h1>TodaysTotal:${this.state.TodaysTotal}.00</h1>
     </footer>
 

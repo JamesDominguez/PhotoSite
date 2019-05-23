@@ -32,22 +32,9 @@ class App extends React.Component {
 </header>
 
           <File/>
+          
 
-<div id="content">
 
-  <div className="box" sTyle="background-color:red;"> 
-      <img src="https://www.freeiconspng.com/uploads/cash-machine-icon-17.png" alt="logo" width="80" height="80"/>
-   </div>
-
-  <div className="box" sTyle="background-color:lightblue;">
-     <img src="http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/money-icon.png" alt="logo" width="80" height="80"/>
-  </div>
-
-  <div className="box" sTyle="background-color:yellow;">
-      <img src="https://www.freeiconspng.com/uploads/cash-machine-icon-17.png" alt="logo" width="80" height="80"/>
-  </div>
-  
-</div>
 
           </div>
         )
