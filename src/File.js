@@ -94,7 +94,7 @@ class File extends React.Component {
     </div>
 
 
-<div className="flex-container">
+<div className="flex-container2">
     <div>
          <input type="text" placeholder="Name" value={this.state.value} onChange={this.handleChange}/>
     <br/>

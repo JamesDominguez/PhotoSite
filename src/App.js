@@ -27,7 +27,7 @@ class App extends React.Component {
 </div>
 
 <header className="App-header">
-<h1>Cube Cash</h1>
+<img src="https://cdn1.imggmi.com/uploads/2019/5/23/8d972ee7b8f9ca0eb5696a4090e9ba3c-full.png" alt="logo" width="80" height="80"/>
 </header>
 
           <File/>
