@@ -27,7 +27,8 @@ class App extends React.Component {
 </div>
 
 <header className="App-header">
-<img src="https://cdn1.imggmi.com/uploads/2019/5/23/8d972ee7b8f9ca0eb5696a4090e9ba3c-full.png" alt="logo" width="80" height="80"/>
+<img src="https://media.istockphoto.com/vectors/vector-of-dollar-sign-frozen-in-ice-cube-vector-id851826232?k=6&m=851826232&s=612x612&w=0&h=GQjOLVlcbqVpZMw_NS7nYDDH8-JblsNWSW7x-arFtoY=" alt="logo" width="100" height="100" />
+<h1 float="right">Cube Cash</h1>
 </header>
 
           <File/>
