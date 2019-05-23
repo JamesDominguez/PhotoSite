@@ -102,7 +102,7 @@ class File extends React.Component {
     <br/>
          <input id="myfile" type="file" onChange={(e)=>this._handleImageChange(e)}/>
     <br/>
-         <button className="button" onClick={this.functionToAddThings}>Add Thing</button> 
+         <button className="button" onClick={this.functionToAddThings}>Add Item</button> 
     </div>
 
     <div sTyle="height:100px">
