@@ -113,7 +113,7 @@ class File extends React.Component {
 
            
 
-    <footer className="App-header">
+    <footer className="App-footer">
           <h1>Current price is: ${this.state.Total}.00</h1>
     </footer>
 
