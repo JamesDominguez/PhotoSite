@@ -104,14 +104,9 @@ class File extends React.Component {
     <br/>
          <button className="button" onClick={this.functionToAddThings}>Add Item</button> 
     </div>
-
-    <div sTyle="height:100px">
-         <h1 onClick={this.Charge} >Charge</h1>
-    </div>
-
 </div>
 
-           
+<footer className="Charge" onClick={this.Charge}>Charge</footer>
 
     <footer className="App-footer">
           <h1>Current price is: ${this.state.Total}.00</h1>

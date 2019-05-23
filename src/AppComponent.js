@@ -5,9 +5,9 @@ function AppComponent(props){
 return(
 
     <div id="item">
-    <img src={props.item.Img} alt="PlaceHolder" height="100" width="100"/>
+    <img src={props.item.Img} alt="PlaceHolder" height="130" width="130"/>
     <h1>{props.item.Text}</h1>
-    <p>${props.item.Price}</p>
+    <h1>${props.item.Price}</h1>
     </div>
 )
 }
