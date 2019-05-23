@@ -53,8 +53,8 @@ class File extends React.Component {
 
   }
 
-  addUp(){
-  this.setState({Total:this.state.Total+1})
+  addUp(price){
+  this.setState({Total:Number(this.state.Total) + Number(price)})
   }
 
   Charge(){
@@ -83,11 +83,11 @@ class File extends React.Component {
         return (  
 <div>
 
-    <div onClick={this.addUp}>
-    
+    <div >
+
         <div className="flex-container">
                  {this.state.thing.map(
-                 (item,index)=>(<AppComponent key={index} functionToAddThings={this.functionToAddThings}
+                 (item,index)=>(<AppComponent key={index} onClick={() => this.addUp(item.Price)} functionToAddThings={this.functionToAddThings}
                  item={{Img:item.Img, Text:item.Text, Price:item.Price}}/>)) }
         </div>
 
