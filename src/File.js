@@ -53,8 +53,8 @@ class File extends React.Component {
 
   }
 
-  addUp(){
-  this.setState({Total:this.state.Total+1})
+  addUp(price){
+  this.setState({Total:Number(this.state.Total) + Number(price)})
   }
 
   Charge(){
@@ -83,11 +83,11 @@ class File extends React.Component {
         return (  
 <div>
 
-    <div onClick={this.addUp}>
-    
+    <div >
+
         <div className="flex-container">
                  {this.state.thing.map(
-                 (item,index)=>(<AppComponent key={index} functionToAddThings={this.functionToAddThings}
+                 (item,index)=>(<AppComponent key={index} onClick={() => this.addUp(item.Price)} functionToAddThings={this.functionToAddThings}
                  item={{Img:item.Img, Text:item.Text, Price:item.Price}}/>)) }
         </div>
 
@@ -112,28 +112,14 @@ class File extends React.Component {
           <h1>Current price is: ${this.state.Total}.00</h1>
     </footer>
 
-    <div id="content">
 
-  <div className="box" sTyle="background-color:red;"> 
-      <img src="https://www.freeiconspng.com/uploads/cash-machine-icon-17.png" alt="logo" width="80" height="80"/>
-   </div>
-
-  <div className="box" sTyle="background-color:lightblue;">
-     <img src="http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/money-icon.png" alt="logo" width="80" height="80"/>
-  </div>
-
-  <div className="box" sTyle="background-color:yellow;">
-      <img src="https://www.freeiconspng.com/uploads/cash-machine-icon-17.png" alt="logo" width="80" height="80"/>
-  </div>
-  
-</div>
 
             
-    <footer className="App-footer" >
+    <footer className="App-footer" Style="display:none;">
           <h1>{this.state.Purchases}</h1>
     </footer>
 
-    <footer className="App-header" >
+    <footer className="App-header" Style="display:none;">
           <h1>TodaysTotal:${this.state.TodaysTotal}.00</h1>
     </footer>
 
