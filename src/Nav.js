@@ -35,8 +35,9 @@ class Nav extends React.Component{
   <a href="https://reactjs.org/docs/dom-elements.html#style" className="active">Home</a>
   <a href="https://reactjs.org/docs/dom-elements.html#style">News</a>
   <a href="https://reactjs.org/docs/dom-elements.html#style">Contact</a>
+
   <a href="https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_responsive_navbar_dropdown">About</a>
-  <a href="no-script-url: 0" Style="font-size:15px;" className="icon" onClick={this.myFunction}>&#9776;</a>
+  <a href="JavaScript:void(0);" Style="font-size:15px;" className="icon" onClick={this.myFunction}>&#9776;</a>
 </div>
 
        </div>
