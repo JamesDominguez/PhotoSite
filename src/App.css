@@ -9,36 +9,6 @@
   color: white;
 }
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  border: 1px solid #e7e7e7;
-  background-color: #f3f3f3;
-}
-
-li {
-  float: left;
-}
-
-li a {
-  display: block;
-  color: #666;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-li a:hover:not(.active) {
-  background-color: #ddd;
-}
-
-li a.active {
-  color: white;
-  background-color: gray;
-}
-
 .App-footer {
   background-color: #88bbd6;
   display: flex;
@@ -48,6 +18,8 @@ li a.active {
   justify-content: center;
   color: white;
 }
+
+ 
 
 .Charge {
   background-color: #99d3df;
@@ -86,7 +58,7 @@ li a.active {
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
-  background-color: #cdcdcd;
+  background-color: white;
 }
 .flex-container > div {
   background-color: #99d3df;
@@ -107,7 +79,7 @@ h1{
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
-  background-color: #cdcdcd;
+  background-color: white;
 }
 
 .flex-container2 > div {
@@ -125,7 +97,7 @@ h1{
 }
 
 body {
-  background-color: #88bbd6;
+  background-color: rgb(100,149,237);
 }
 
 img{
@@ -135,15 +107,15 @@ img{
 
 
 .button {
-  background-color: #cdcdcd; /* Green */
+  background-color: white; /* Green */
   border: none;
-  color: white;
+  color: gray;
   margin: 2px;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 20px;
+  font-size: 10px;
 }
 
 .button2 {
@@ -175,3 +147,22 @@ img{
   flex-grow: 2;
   border: 3px solid rgba(0,0,0,.2);
 }
+
+.fa-1x {
+  font-size: 1.5rem;
+  }
+  .navbar-toggler.toggler-example {
+  cursor: pointer;
+  }
+  .dark-blue-text {
+  color: #0A38F5;
+  }
+  .dark-pink-text {
+  color: #AC003A;
+  }
+  .dark-amber-text {
+  color: #ff6f00;
+  }
+  .dark-teal-text {
+  color: #004d40;
+  }
