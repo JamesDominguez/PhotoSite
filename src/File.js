@@ -1,14 +1,14 @@
 import React from "react"
 import './App.css';
 import AppComponent from './AppComponent'
+
 class File extends React.Component {
     constructor() {
         super()
 
     this.state = {
-          thing:[  {Img:"https://www.logistec.com/wp-content/uploads/2017/12/placeholder.png", Text:"Create Item"} ]
-          , file: '',imagePreviewUrl: '',Total:0,Purchases:['Purchases Today:'],TodaysTotal:0,value: '',value2:"",RunOnce:true
-    }
+          thing:[  {Img:"https://www.logistec.com/wp-content/uploads/2017/12/placeholder.png", Text:"-Name-",Price:"Price$"}]
+          , file: '',imagePreviewUrl: '',Total:0,Purchases:['Purchases Today:'],TodaysTotal:0,value: '',value2:"",RunOnce:true,Display:"flex",DisplayTrue:true,DisplayContainer:"flex" }
 
            this.functionToAddThings = this.functionToAddThings.bind(this)
            this.addUp = this.addUp.bind(this)
@@ -16,8 +16,7 @@ class File extends React.Component {
            this.handleChange = this.handleChange.bind(this)
            this.ClearUpEx = this.ClearUpEx.bind(this)
            this.handleChange2 = this.handleChange2.bind(this)
-
-
+           this.changeDisplay = this.changeDisplay.bind(this)
     }
 
   functionToAddThings() {//creats Item 
@@ -76,7 +75,19 @@ class File extends React.Component {
   handleChange2(event) {
     this.setState({value2: event.target.value});
   }
-    
+
+  changeDisplay() {
+    if(this.state.DisplayTrue){
+    this.setState({Display:"none"})
+    this.setState({DisplayTrue:false})
+}       
+    else{
+        this.setState({Display:"flex"})
+        this.setState({DisplayTrue:true})
+    }
+}
+
+ //	rgb(176,196,222)   
     render() {
  
       
@@ -94,7 +105,7 @@ class File extends React.Component {
     </div>
 
 
-<div className="flex-container2">
+<div className="flex-container2"   style={{display:this.state.Display}}>
     <div>
          <input type="text" placeholder="Name" value={this.state.value} onChange={this.handleChange}/>
     <br/>
@@ -106,7 +117,15 @@ class File extends React.Component {
     </div>
 </div>
 
-<footer className="Charge" onClick={this.Charge}>Charge</footer>
+<div className="flex-container3" style={{display:this.state.DisplayContainer}}>
+    <div onClick={this.changeDisplay}>
+         <img src="https://static.thenounproject.com/png/396915-200.png" alt="PlaceHolder" height="70" width="70"/>
+    </div>
+    <div onClick={this.Charge}>
+    <img  src="https://i.pinimg.com/474x/b4/9c/59/b49c59f693b30f4533bb7d61d50e0921.jpg" alt="PlaceHolder" height="70" width="70"/>
+    </div>
+</div>
+
 
     <footer className="App-footer">
           <h1>Current price is: ${this.state.Total}.00</h1>
@@ -115,11 +134,11 @@ class File extends React.Component {
 
 
             
-    <footer className="App-footer" Style="display:none;">
+    <footer className="App-footer" style={{display:"none"}}>
           <h1>{this.state.Purchases}</h1>
     </footer>
 
-    <footer className="App-header" Style="display:none;">
+    <footer className="App-header" style={{display:"none"}}>
           <h1>TodaysTotal:${this.state.TodaysTotal}.00</h1>
     </footer>
 

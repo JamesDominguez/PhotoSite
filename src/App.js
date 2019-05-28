@@ -1,7 +1,6 @@
 import React from "react"
 import './App.css';
 import File from './File'
-import Chart from './Chart'
 import Nav from './Nav'
 
 
@@ -27,7 +26,6 @@ class App extends React.Component {
 </header>
           <File/>
       
-          <Chart/>
 
 
 
