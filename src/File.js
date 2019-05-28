@@ -8,7 +8,9 @@ class File extends React.Component {
 
     this.state = {
           thing:[  {Img:"https://www.logistec.com/wp-content/uploads/2017/12/placeholder.png", Text:"-Name-",Price:"Price$"}]
-          , file: '',imagePreviewUrl: '',Total:0,Purchases:['Purchases Today:'],TodaysTotal:0,value: '',value2:"",RunOnce:true,Display:"flex",DisplayTrue:true,DisplayContainer:"flex" }
+          , file: '',imagePreviewUrl: '',Total:0,Purchases:['Purchases Today:'],TodaysTotal:0,value: '',value2:"",RunOnce:true,Display:"flex",DisplayTrue:true,DisplayContainer:"flex",
+            DataDisplay:"none",MainDataDisplay:"none"
+        }
 
            this.functionToAddThings = this.functionToAddThings.bind(this)
            this.addUp = this.addUp.bind(this)
@@ -17,6 +19,10 @@ class File extends React.Component {
            this.ClearUpEx = this.ClearUpEx.bind(this)
            this.handleChange2 = this.handleChange2.bind(this)
            this.changeDisplay = this.changeDisplay.bind(this)
+           this.changeDataDisplay = this.changeDataDisplay.bind(this)
+           this.changeDataDisplay2 = this.changeDataDisplay2.bind(this)
+
+
     }
 
   functionToAddThings() {//creats Item 
@@ -87,6 +93,28 @@ class File extends React.Component {
     }
 }
 
+    changeDataDisplay(){
+        if(this.state.DisplayTrue){
+            this.setState({DataDisplay:"none"})
+            this.setState({DisplayTrue:false})
+        }       
+            else{
+                this.setState({DataDisplay:"flex"})
+                this.setState({DisplayTrue:true})
+            }
+    }
+
+    changeDataDisplay2(){
+        if(this.state.DisplayTrue){
+            this.setState({MainDataDisplay:"none"})
+            this.setState({DisplayTrue:false})
+        }       
+            else{
+                this.setState({MainDataDisplay:"flex"})
+                this.setState({DisplayTrue:true})
+            }
+    }
+
  //	rgb(176,196,222)   
     render() {
  
@@ -94,7 +122,17 @@ class File extends React.Component {
         return (  
 <div>
 
-    <div >
+    <div class="container" onClick={this.changeDataDisplay}>
+            <img src="http://ice.ethz.ch/images/menu.png" class="logout" alt="PlaceHolder" height="60" width="70"/>  
+        </div>
+
+        <header class="NavHeader" style={{display:this.state.DataDisplay}}>About</header>
+        <header onClick={this.changeDataDisplay2} class="NavHeader" style={{display:this.state.DataDisplay}}> Display Data</header>
+
+<header className="App-header">
+    <h1 float="right">Cube<img src="https://media.istockphoto.com/vectors/vector-of-dollar-sign-frozen-in-ice-cube-vector-id851826232?k=6&m=851826232&s=612x612&w=0&h=GQjOLVlcbqVpZMw_NS7nYDDH8-JblsNWSW7x-arFtoY=" alt="logo" width="70" height="70" />Cash</h1>
+</header>
+
 
         <div className="flex-container">
                  {this.state.thing.map(
@@ -102,7 +140,7 @@ class File extends React.Component {
                  item={{Img:item.Img, Text:item.Text, Price:item.Price}}/>)) }
         </div>
 
-    </div>
+    
 
 
 <div className="flex-container2"   style={{display:this.state.Display}}>
@@ -134,11 +172,11 @@ class File extends React.Component {
 
 
             
-    <footer className="App-footer" style={{display:"none"}}>
+    <footer className="App-footer" style={{display:this.state.MainDataDisplay}}>
           <h1>{this.state.Purchases}</h1>
     </footer>
 
-    <footer className="App-header" style={{display:"none"}}>
+    <footer className="App-header" style={{display:this.state.MainDataDisplay}}>
           <h1>TodaysTotal:${this.state.TodaysTotal}.00</h1>
     </footer>
 

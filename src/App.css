@@ -17,36 +17,45 @@
   align-items: center;
   justify-content: center;
   color: white;
+  
 }
 
+.NavHeader {
+  background-color:	rgb(100,149,237);
+  border-style: solid;
+  border-bottom-color: rgb(0,0,205);
+  border-left-color: rgb(100,149,237);
+  border-right-color: rgb(100,149,237);
+  border-top-color:  rgb(0,0,205);
 
-.Charge {
-  background-color: #99d3df;
-  min-height: 10px;
+  color: white;
   display: flex;
-  height: 30px;
+  height: 40px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: white;
 }
 
 
-.More {
-  background-color: black;
-  min-height: 10vh;
+.container {
   display: flex;
-  height: 30px;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+
+.logout {
+  margin-left: auto;
+}
+
+.container > div:nth-child(1n) {
+  background-color: #96ceb4;	
 }
 
 
-
-
+.container > div {
+  padding: 10px;
+  text-align: center;
+  font-size: 2em;
+  color: #ffeead;
+}
 
 
 
