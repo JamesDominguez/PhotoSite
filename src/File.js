@@ -23,7 +23,9 @@ class File extends React.Component {
            this.changeDisplay = this.changeDisplay.bind(this)
            this.changeDataDisplay = this.changeDataDisplay.bind(this)
            this.changeDataDisplay2 = this.changeDataDisplay2.bind(this)
+           this.removeCartItem = this.removeCartItem.bind(this)
 
+        
 
     }
 
@@ -82,6 +84,8 @@ class File extends React.Component {
   this.state.Purchases.push(", ")
   this.setState({TodaysTotal:this.state.TodaysTotal+this.state.Total})
   this.setState({Total:0})
+
+  this.state.CartThing.splice(0,this.state.CartThing.length);
   }
 
   handleChange(event) {//updates the value from text 
@@ -123,6 +127,16 @@ class File extends React.Component {
                 this.setState({MainDataDisplay:"flex"})
                 this.setState({DisplayTrue:true})
             }
+    }
+
+    removeCartItem(indexs,cart){
+        const {CartThing} = this.state;
+        let newer = CartThing
+        CartThing.splice(0,CartThing);
+        newer.splice(indexs,1)
+        this.setState({CartThing: newer})
+
+        this.setState({Total:this.state.Total-cart.CPrice})
     }
 
     render() {
@@ -178,7 +192,7 @@ class File extends React.Component {
 
            <div className="flex-containerCart">
            {this.state.CartThing.map(
-                 (cart,index)=>(<Cart key={index}
+                 (cart,indexs)=>(<Cart key={indexs} onClick={() => this.removeCartItem(indexs,cart) }
                  cart={{CPrice:cart.CPrice,ItemUrl:cart.ItemUrl,CName:cart.CName, Height:"50",Width:"50"}}/>)) }
            </div>
 

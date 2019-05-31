@@ -71,8 +71,9 @@
   margin-left: auto;
 }
 
-
-
+h2{
+  color:white;
+}
 
 .flex-container {
   display: flex;
@@ -90,20 +91,15 @@
 }
 
 .flex-containerCart {
+  background-color: rgb(169, 204, 227);
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
   height:50px;
-  flex-direction: row;
-  margin: auto;  
-  text-align: justify;
-  background-color: #99d3df;
+
 }
-.flex-containerCart > div {
-  background-color: #99d3df;
-  flex-direction: row;
-  margin: auto;  
-  text-align: center;
-  font-size: 10px;
-}
+
 
 
 h1{

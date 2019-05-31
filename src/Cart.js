@@ -3,19 +3,23 @@ import './App.css';
 function Cart(props){
 
 return(
-    <div>
+    <div className="flex-containerCart">
 
-
+<div>
 <img  src={props.cart.ItemUrl} alt="PlaceHolder" height={props.cart.Height} width={props.cart.Width}/>
+</div>
 
-<h2>{props.cart.CName}</h2>
+<div>
+<h2>{props.cart.CName}__</h2>
+</div>
 
+<div>
+<h2>${props.cart.CPrice}</h2>
+</div>
 
-<h2> {props.cart.CPrice}</h2>
-
-
-
-<img  src="https://cdn.iconscout.com/icon/free/png-256/false-delete-remove-cross-wrong-14-16351.png" alt="PlaceHolder" height={props.cart.Height} width={props.cart.Width} id="CartImg"/>
+<div id="CartImg">
+<img  src="https://cdn.iconscout.com/icon/free/png-256/false-delete-remove-cross-wrong-14-16351.png" alt="PlaceHolder" height={props.cart.Height} width={props.cart.Width} onClick={props.onClick}/>
+</div>
 
 
 </div>
