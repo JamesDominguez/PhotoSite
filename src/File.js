@@ -2,6 +2,7 @@ import React from "react"
 import './App.css';
 import AppComponent from './AppComponent'
 import Cart from './Cart'
+
 class File extends React.Component {
     
     constructor() {
@@ -10,8 +11,9 @@ class File extends React.Component {
     this.state = {
           thing:[  {Img:"https://www.logistec.com/wp-content/uploads/2017/12/placeholder.png", Text:"-Name-",Price:"Price$"}],
           CartThing:[]
-          , file: '',imagePreviewUrl: '',Total:0,Purchases:['Purchases Today:'],TodaysTotal:0,value: '',value2:"",RunOnce:true,Display:"flex",DisplayTrue:true,DisplayContainer:"flex",
-            DataDisplay:"none",MainDataDisplay:"none"
+          , file: '',imagePreviewUrl: '',Total:0,Purchases:['Purchases Today:'],TodaysTotal:0,value: '',value2:"",RunOnce:true,Display:"flex",
+          DisplayTrue:true,DisplayContainer:"flex"
+          
         }
 
            this.functionToAddThings = this.functionToAddThings.bind(this)
@@ -21,9 +23,10 @@ class File extends React.Component {
            this.ClearUpEx = this.ClearUpEx.bind(this)
            this.handleChange2 = this.handleChange2.bind(this)
            this.changeDisplay = this.changeDisplay.bind(this)
-           this.changeDataDisplay = this.changeDataDisplay.bind(this)
-           this.changeDataDisplay2 = this.changeDataDisplay2.bind(this)
            this.removeCartItem = this.removeCartItem.bind(this)
+
+
+
 
         
 
@@ -107,27 +110,7 @@ class File extends React.Component {
     }
 }
 
-    changeDataDisplay(){
-        if(this.state.DisplayTrue){
-            this.setState({DataDisplay:"none"})
-            this.setState({DisplayTrue:false})
-        }       
-            else{
-                this.setState({DataDisplay:"flex"})
-                this.setState({DisplayTrue:true})
-            }
-    }
 
-    changeDataDisplay2(){
-        if(this.state.DisplayTrue){
-            this.setState({MainDataDisplay:"none"})
-            this.setState({DisplayTrue:false})
-        }       
-            else{
-                this.setState({MainDataDisplay:"flex"})
-                this.setState({DisplayTrue:true})
-            }
-    }
 
     removeCartItem(indexs,cart){
         const {CartThing} = this.state;
@@ -139,17 +122,18 @@ class File extends React.Component {
         this.setState({Total:this.state.Total-cart.CPrice})
     }
 
+
+
     render() {
       
         return (  
 <div>
 
-    <div className="container" onClick={this.changeDataDisplay}>
-            <img src="http://ice.ethz.ch/images/menu.png" className="logout" alt="PlaceHolder" height="60" width="70"/>  
-        </div>
 
-        <header className="NavHeader2" style={{display:this.state.DataDisplay}}>About</header>
-        <header onClick={this.changeDataDisplay2} className="NavHeader" style={{display:this.state.DataDisplay}}> Display Data</header>
+
+
+
+
 
 <header className="App-header">
     <h1 float="right">Cube<img src="https://media.istockphoto.com/vectors/vector-of-dollar-sign-frozen-in-ice-cube-vector-id851826232?k=6&m=851826232&s=612x612&w=0&h=GQjOLVlcbqVpZMw_NS7nYDDH8-JblsNWSW7x-arFtoY=" alt="logo" width="70" height="70" />Cash</h1>
@@ -197,11 +181,11 @@ class File extends React.Component {
            </div>
 
 
-    <footer className="App-footer" style={{display:this.state.MainDataDisplay}}>
+    <footer className="App-footer" style={{display:"none"}}>
           <h1>{this.state.Purchases}</h1>
     </footer>
 
-    <footer className="App-header" style={{display:this.state.MainDataDisplay}}>
+    <footer className="App-header" style={{display:"none"}}>
           <h1>TodaysTotal:${this.state.TodaysTotal}.00</h1>
     </footer>
 
