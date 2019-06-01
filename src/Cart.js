@@ -18,7 +18,7 @@ return(
 </div>
 
 <div id="CartImg">
-<img  src="https://cdn.iconscout.com/icon/free/png-256/false-delete-remove-cross-wrong-14-16351.png" alt="PlaceHolder" height={props.cart.Height} width={props.cart.Width} onClick={props.onClick}/>
+<img  src="https://i.ibb.co/PcXRj4S/download-2.png" alt="PlaceHolder" height={props.cart.Height} width={props.cart.Width} onClick={props.onClick}/>
 </div>
 
 

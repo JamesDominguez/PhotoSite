@@ -1,6 +1,6 @@
 
 .App-header {
-  background-color: 	#88bbd6;
+  background-color: 	black;
   min-height: 10vh;
   height: 70px;
   display: flex;
@@ -11,7 +11,7 @@
 }
 
 .App-footer {
-  background-color: #88bbd6;
+  background-color: black;
   display: flex;
   height: 50px;
   flex-direction: column;
@@ -40,17 +40,21 @@ h2{
   margin: 50px auto;
 }
 .flex-container > div {
-  background-color: #99d3df;
+  background-color: white;
   height:255px;
   text-align: center;
+  border-radius: 25px;
   padding: 0px;
   font-size: 2px;
 }
 
-
+.Img{
+  border-top-left-radius: 25px 25px;
+  border-top-right-radius: 25px 25px;
+}
 
 .flex-containerCart {
-  background-color: rgb(169, 204, 227);
+  background-color: rgb(105,105,105);
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -59,10 +63,20 @@ h2{
 
 }
 
+.NavBar{
+  background-color:black;
+  height:50px;
+}
+.NavBarIcon{
+  color: white;
+  background-color:black;
+  height:50px;
+  width: 50px;
+}
 
 
 h1{
-  color: white;
+  color: rgb(169,169,169);
   font-size: 25px;
 }
 
@@ -73,7 +87,7 @@ h1{
 }
 
 .flex-container2 > div {
-  background-color: #99d3df;
+  background-color: black;
   border-radius:1em;
   text-align: center;
   margin: 20px;
@@ -88,7 +102,7 @@ h1{
 }
 
 .flex-container3 > div {
-  background-color: #99d3df;
+  background-color: black;
   border-radius:1em;
   text-align: center;
   margin: 10px;
@@ -98,7 +112,7 @@ h1{
 
 
 body {
-  background-color: rgb(100,149,237);
+  background-color:	rgb(245,245,245);
 }
 
 .button {

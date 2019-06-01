@@ -6,7 +6,7 @@ function AppComponent(props){
 return(
 
     <div onClick={props.onClick}>
-    <img src={props.item.Img} alt="PlaceHolder" height={props.item.Height} width={props.item.Width}/>
+    <img src={props.item.Img} alt="PlaceHolder" height={props.item.Height} width={props.item.Width} className="Img"/>
     <h1>{props.item.Text}</h1>
     <h1>${props.item.Price}</h1>
     </div>

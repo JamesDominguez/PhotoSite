@@ -136,7 +136,7 @@ class File extends React.Component {
 
 
 <header className="App-header">
-    <h1 float="right">Cube<img src="https://media.istockphoto.com/vectors/vector-of-dollar-sign-frozen-in-ice-cube-vector-id851826232?k=6&m=851826232&s=612x612&w=0&h=GQjOLVlcbqVpZMw_NS7nYDDH8-JblsNWSW7x-arFtoY=" alt="logo" width="70" height="70" />Cash</h1>
+    <h1 float="right">Cube<img src="https://unixtitan.net/images/cube-transparent-isometric.png" alt="logo" width="70" height="70" />Cash</h1>
 </header>
 
         <div className="flex-container">
@@ -162,10 +162,10 @@ class File extends React.Component {
 
 <div className="flex-container3" style={{display:this.state.DisplayContainer}}>
     <div onClick={this.changeDisplay}>
-         <img src="https://static.thenounproject.com/png/396915-200.png" alt="PlaceHolder" height="70" width="70"/>
+         <img src="https://i.ibb.co/zVs2MWh/download.png" alt="PlaceHolder" height="70" width="70"/>
     </div>
     <div onClick={this.Charge}>
-    <img  src="http://pngimg.com/uploads/dollar_sign/dollar_sign_PNG21539.png" alt="PlaceHolder" height="70" width="70"/>
+    <img  src="https://i.ibb.co/RNjQYWM/download-1.png" alt="PlaceHolder" height="70" width="70"/>
     </div>
 </div>
 

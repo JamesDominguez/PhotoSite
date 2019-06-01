@@ -42,8 +42,8 @@ class App extends React.Component {
   <Link to="/Chart/" className="w3-bar-item w3-button">Charts</Link>
   </div>
 
-  <div className="w3-teal">
-  <button className="w3-button w3-teal w3-xlarge" onClick={this.w3_open}>☰</button>
+  <div className="NavBar">
+  <button className="NavBarIcon" onClick={this.w3_open}>☰</button>
 </div>
 
 <Route exact path="/" component={File} />
