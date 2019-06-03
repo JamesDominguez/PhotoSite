@@ -135,9 +135,7 @@ class File extends React.Component {
 
 
 
-<header className="App-header">
-    <h1 float="right">Cube<img src="https://unixtitan.net/images/cube-transparent-isometric.png" alt="logo" width="70" height="70" />Cash</h1>
-</header>
+
 
         <div className="flex-container">
                  {this.state.thing.map(

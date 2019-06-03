@@ -4,6 +4,8 @@ import File from './File'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Charts from './Charts'
 import About from './About'
+import LogIn from './LogIn'
+
 
 
 
@@ -46,7 +48,7 @@ class App extends React.Component {
   <button className="NavBarIcon" onClick={this.w3_open}>☰</button>
 </div>
 
-<Route exact path="/" component={File} />
+<Route exact path="/" component={LogIn} />
 <Route path="/about" component={About} />
 <Route path="/Chart" component={Charts} />
 </Router>

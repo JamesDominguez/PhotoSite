@@ -23,8 +23,10 @@ class About extends React.Component {
 
 <div className="parallax"></div>
 
-<div className="parallaxDiv">
-<h1>
+
+<div id="page-container">
+   <div id="content-wrap">
+   <h1>
 This is the future
  <br/>
 We are 
@@ -32,8 +34,10 @@ We are
 who we say we are 
 <br/>
 and that is it
-</h1>
-</div>
+</h1>   </div>
+   <footer id="footer"></footer>
+ </div>
+
           </div>
         )
     }
