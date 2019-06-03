@@ -4,7 +4,6 @@ import * as firebase from 'firebase/app';
 import 'firebase/auth';
 import firebaseConfig from './firebaseConfig';
 import './App.css';
-import File from './File'
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 
@@ -19,12 +18,11 @@ class LogIn extends Component {
     return (
       <div className="App">
 
-<header className="App-header">
-    <h1 float="right">Cube<img src="https://unixtitan.net/images/cube-transparent-isometric.png" alt="logo" width="70" height="70" />Cash</h1>
-</header>
+
           {
             user
-              ? <p>Hello, {user.displayName}<File/></p>
+              ? <p>Hello, {user.displayName}</p>
+              
               : <p>Please sign in.</p>
           }
 

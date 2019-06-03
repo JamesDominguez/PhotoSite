@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Charts from './Charts'
 import About from './About'
 import LogIn from './LogIn'
-
+import File from './File'
 
 
 
@@ -13,7 +13,7 @@ class App extends React.Component {
         super()
         this.state = {
              NavDisplay:"none",
-             width:"0%",
+             width:"0%"
     }
         
         this.w3_open = this.w3_open.bind(this)
@@ -47,6 +47,8 @@ class App extends React.Component {
   <Link to="/" className="w3-bar-item w3-button">Home</Link>
   <Link to="/about/" className="w3-bar-item w3-button">About</Link>
   <Link to="/Chart/" className="w3-bar-item w3-button">Charts</Link>
+  <Link to="/File/" className="w3-bar-item w3-button">File</Link>
+
   </div>
 
   <div className="NavBar">
@@ -56,6 +58,8 @@ class App extends React.Component {
 <Route exact path="/" component={LogIn} />
 <Route path="/about" component={About} />
 <Route path="/Chart" component={Charts} />
+<Route path="/File" component={File} />
+
 </Router>
 
       
