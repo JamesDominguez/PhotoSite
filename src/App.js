@@ -13,8 +13,7 @@ class App extends React.Component {
         super()
         this.state = {
              NavDisplay:"none",
-             width:"",
-             openNav:""
+             width:"0%",
     }
         
         this.w3_open = this.w3_open.bind(this)
@@ -23,39 +22,34 @@ class App extends React.Component {
     w3_open() {
         this.setState({NavDisplay:"block"})
         this.setState({width:"25%"})
-        this.setState({openNav:"none"})
     }
       
        w3_close() {
         this.setState({NavDisplay:"none"})
-        this.setState({openNav:"none"})
+        this.setState({width:"0%"})
+
       }
 
 
     
     render() {
-const styles={
-    display:this.state.NavDisplay,
-    width:this.state.width
-}
 
-
+    const style={
+        display:this.state.NavDisplay,
+        width:this.state.width
+     }
         return (  
 <div>
 
-
-
-
-
 <Router>
-<div className="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left" style={styles} id="mySidebar">
+<div className="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left" style={style} >
   <button onClick={this.w3_close} className="w3-bar-item w3-button w3-large">Close</button>
   <Link to="/" className="w3-bar-item w3-button">Home</Link>
   <Link to="/about/" className="w3-bar-item w3-button">About</Link>
   <Link to="/Chart/" className="w3-bar-item w3-button">Charts</Link>
   </div>
 
-  <div className="NavBar" style={{openNav:this.state.openNav}}>
+  <div className="NavBar">
   <button className="NavBarIcon" onClick={this.w3_open}>☰</button>
 </div>
 
