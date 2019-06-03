@@ -1,6 +1,5 @@
 import React from "react"
 import './App.css';
-import File from './File'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Charts from './Charts'
 import About from './About'
@@ -12,22 +11,34 @@ import LogIn from './LogIn'
 class App extends React.Component {
     constructor() {
         super()
-        this.state = { NavDisplay:"none"}
+        this.state = {
+             NavDisplay:"none",
+             width:"",
+             openNav:""
+    }
         
         this.w3_open = this.w3_open.bind(this)
         this.w3_close = this.w3_close.bind(this)
     }
     w3_open() {
         this.setState({NavDisplay:"block"})
+        this.setState({width:"25%"})
+        this.setState({openNav:"none"})
     }
       
        w3_close() {
         this.setState({NavDisplay:"none"})
+        this.setState({openNav:"none"})
       }
 
 
     
     render() {
+const styles={
+    display:this.state.NavDisplay,
+    width:this.state.width
+}
+
 
         return (  
 <div>
@@ -37,14 +48,14 @@ class App extends React.Component {
 
 
 <Router>
-<div className="w3-sidebar w3-bar-block w3-border-right" style={{display:this.state.NavDisplay}} id="mySidebar">
-  <button onClick={this.w3_close} className="w3-bar-item w3-large">Close</button>
+<div className="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left" style={styles} id="mySidebar">
+  <button onClick={this.w3_close} className="w3-bar-item w3-button w3-large">Close</button>
   <Link to="/" className="w3-bar-item w3-button">Home</Link>
   <Link to="/about/" className="w3-bar-item w3-button">About</Link>
   <Link to="/Chart/" className="w3-bar-item w3-button">Charts</Link>
   </div>
 
-  <div className="NavBar">
+  <div className="NavBar" style={{openNav:this.state.openNav}}>
   <button className="NavBarIcon" onClick={this.w3_open}>☰</button>
 </div>
 

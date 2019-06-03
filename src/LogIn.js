@@ -30,8 +30,8 @@ class LogIn extends Component {
 
           {
             user
-              ? <button onClick={signOut}>Sign out</button>
-              : <button onClick={signInWithGoogle}>Sign in with Google</button>
+              ? <button onClick={signOut} className="buttonLog">Sign out</button>
+              : <button onClick={signInWithGoogle} className="buttonLog">Sign in with Google</button>
           }
 
       </div>

@@ -132,6 +132,29 @@ body {
   font-size: 10px;
 }
 
+.buttonLog {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: black;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.buttonLog:hover {background-color: rgb(50,50,50)}
+
+.buttonLog:active {
+  background-color: black;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
 .inputfile {
   background-color: white; /* Green */
   border: none;
